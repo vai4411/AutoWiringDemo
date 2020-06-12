@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
         ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
-        Collage collage =context.getBean("collage", Collage.class);
+        Collage collage =(Collage) context.getBean("collage");
         collage.display();
     }
 }
